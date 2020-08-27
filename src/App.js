@@ -41,6 +41,16 @@ function App() {
           playlists: playlists
         })
       })
+
+
+      spotify.getPlaylist("37i9dQZEVXcO0pID7wIzB6").then(playlist => {
+        console.log("weekly", playlist)
+
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          weekly: playlist
+        })
+      })
     }
   }, [])
 

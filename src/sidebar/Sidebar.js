@@ -23,7 +23,7 @@ export default function Sidebar() {
 
             {playlists?.items?.map(playlist => {
                 return (
-                    <SidebarOption title={playlist.name} />
+                    <SidebarOption key={playlist.name} title={playlist.name} />
                 )
             })}
 
